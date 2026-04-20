@@ -1,0 +1,154 @@
+/* Animated gradient background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* App container */
+.App {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: rgba(34, 34, 34, 0.9);
+  color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Toggle button */
+.toggle-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Progress bar */
+.progress-container {
+  background: #ddd;
+  border-radius: 10px;
+  height: 12px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 12px;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.filters button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: #0056b3;
+}
+
+/* Task cards */
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.task-card span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.badge {
+  background: #ff9a9e;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.task-card button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task-card button:hover {
+  background: #d90429;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
